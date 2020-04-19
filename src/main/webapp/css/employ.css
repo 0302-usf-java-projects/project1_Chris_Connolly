@@ -1,0 +1,182 @@
+*{
+	font-family: 'Chivo', sans-serif;
+}
+
+body { 
+    background: url(../assets/birch.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+#imb{
+    background-color: rgba(0, 0, 0, 0.76);
+    padding:5%; 
+    margin-top: 120px;
+    -webkit-box-shadow: 0px 2px 33px 8px rgba(36,36,36,0.97);
+    -moz-box-shadow: 0px 2px 33px 8px rgba(36,36,36,0.97);
+    box-shadow: 0px 2px 33px 8px rgba(36,36,36,0.97);
+    max-width: 650px;
+    position: relative;
+    margin-left: 10px;
+    min-height: 404px;
+    border-radius: 20px 0px 0px 20px;
+    margin-right:3px;
+}
+
+#selector{
+  float:right;
+    margin-bottom: 15px;
+}
+
+#button{
+     margin-right: 3%;
+      float:right;
+      margin-top: 20px;
+  }
+
+  #dollar{
+      width: 50%;
+      float:right;
+  }
+
+  h4{
+  		margin-top: 5px !important;
+  		font-weight: bold !important;
+      	text-align: center;
+  }
+  
+  #tableTitle{
+ 		margin-top: 120px !important;
+  		font-weight: bold !important;
+  		text-align: center;
+  		margin-bottom: 0 !important;
+  		border-radius: 0 20px 0px 0;
+  		background-color: rgba(0, 0, 0, 0.86);
+		padding-top: 30px;
+    /*box-shadow: 0px 2px 33px 8px rgba(36,36,36,0.97);*/
+  }
+  
+  .tableContainer{
+  box-shadow: 0px 2px 33px 8px rgba(36,36,36,0.97);
+  margin-right: 10px;
+  border-radius: 0 20px 20px 0;
+  }
+
+#table_wrapper{
+	padding: 48px;
+	background-color: rgba(0, 0, 0, 0.86);
+	border-radius: 0 0px 20px 0;
+    
+    min-height: 340px;
+    
+}
+table.dataTable tbody tr {
+    background-color: #050505; 
+    }
+ 
+table.dataTable tbody tr.selected {
+      background-color: #c8d3eb; 
+      }
+      
+     .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+    color: #b3b3b3 !important;
+}
+
+
+element {
+
+}
+table.dataTable tbody th, table.dataTable tbody td {
+
+    padding: 8px 10px;
+
+}
+table.dataTable, table.dataTable th, table.dataTable td {
+
+    box-sizing: content-box;
+
+}
+*, ::after, ::before {
+
+    box-sizing: border-box;
+
+}
+
+table.dataTable {
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+}
+table {
+
+    border-collapse: collapse;
+
+}
+
+html body div.row div.col-8 div#table_wrapper.dataTables_wrapper.no-footer table#table.dataTable.no-footer thead tr{
+	color: white;
+}
+
+#logoIcon{
+	height: 35px;
+	
+}
+
+#soBoard{
+	color: whitesmoke;
+	font-weight: bold !important;
+	position:relative;
+	left:0;
+	right:0;
+	text-align: center;
+	top:5px;
+	padding-bottom: 5px;
+	padding-top:5px;
+
+}
+
+.navbar{
+	background-color: black;
+	min-height: 80px;
+}
+
+#treeIcon{
+	height: 40px;
+}
+      
+html body div.row div.col-8 div.tableContainer div#table_wrapper.dataTables_wrapper.no-footer div#table_paginate.dataTables_paginate.paging_simple_numbers span a.paginate_button{
+	color: white !important;
+}
+
+html body div.row div.col-8 div.tableContainer div#table_wrapper.dataTables_wrapper.no-footer div#table_paginate.dataTables_paginate.paging_simple_numbers span a.paginate_button.current{
+	color: black !important;
+}
+
+html body div.row div.col-8 div.tableContainer div#table_wrapper.dataTables_wrapper.no-footer div#table_paginate.dataTables_paginate.paging_simple_numbers a#table_previous.paginate_button.previous.disabled{
+	color: whitesmoke !important;
+}
+
+html body div.row div.col-8 div.tableContainer div#table_wrapper.dataTables_wrapper.no-footer div#table_paginate.dataTables_paginate.paging_simple_numbers a#table_next.paginate_button.next{
+	color: whitesmoke !important;
+}
+
+.btn-light{
+	background-color: #303030 !important;
+	color: white !important;
+	border-color: #717171!important;
+	transition-duration: .08s !important;
+	margin-right: 3%;
+      float:right;
+      margin-top: 20px;
+}
+
+ .btn-light:hover{
+    background-color: #4e4e4e!important;
+  }
+  
+  .titleHead{
+  display: inline-block;
+width: 90%;}

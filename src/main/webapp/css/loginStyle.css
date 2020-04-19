@@ -1,0 +1,79 @@
+*{
+	font-family: 'Chivo', sans-serif;
+}
+
+body{
+    background-image: url(../assets/tree.jpg!d);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+
+.container{
+	margin-top: 70px;
+    background-color: rgba(66, 66, 66, 0.74);   
+    -webkit-box-shadow: 0px 2px 33px 8px rgba(36,36,36,0.97);
+-moz-box-shadow: 0px 2px 33px 8px rgba(36,36,36,0.97);
+box-shadow: 0px 2px 33px 8px rgba(36,36,36,0.97);
+   
+}
+
+#rcorners {
+    border-radius: 25px;
+    border: 2px solid black;
+    width: 500px;
+    height: 360px;
+    position: absolute;
+    top: 100px;
+    left: calc(50% - 250px);
+    padding: 40px;
+    background-color: #000000b3;
+  }
+
+  #button{
+     margin-right: 3%;
+      float:right
+  }
+  
+  .btn{
+  background-color: #313131 !important;
+  color: white !important;
+  border-color: #9c9c9c !important;
+  transition-duration: .08s;
+  }
+  
+   .btn:hover{
+    background-color: #4e4e4e!important;
+  }
+
+  #login{
+  font-weight: bold;
+      text-align: right;
+      margin-right: 3%;
+  }
+  
+  #soBoard{
+	color: whitesmoke;
+	font-weight: bold !important;
+	position:absolute;
+	left:0;
+	right:0;
+	text-align: center;
+	top:5px;
+	z-index:2000;
+	padding-bottom: 5px;
+	padding-top:5px;
+
+}
+
+.navbar{
+	background-color: black;
+	min-height: 80px;
+}
+
+#treeIcon{
+	height: 40px;
+}
+
