@@ -27,7 +27,6 @@ public class ersDao implements DaoInterface<userAccounts, Imbursements>{
     cs.setString(3, password);
     cs.execute();
     String pass = cs.getString(1);
-    System.out.println(pass);
     cs.close();
     return pass;
   }catch(SQLException e) {

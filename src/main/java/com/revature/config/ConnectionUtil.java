@@ -16,8 +16,7 @@ public class ConnectionUtil {
 
 public static Connection connect() throws SQLException {
     return DriverManager.getConnection(
-            "jdbc:postgresql://chrisco-db.c7xvbdwzcuip.us-east-1.rds.amazonaws.com"+
-                    ":5432/ers",
+            "jdbc:postgresql://chrisco-db.c7xvbdwzcuip.us-east-1.rds.amazonaws.com:5432/ers",
             "chriscon46",
             "wasspord"
             );
