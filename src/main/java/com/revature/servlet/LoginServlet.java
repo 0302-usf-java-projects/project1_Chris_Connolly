@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.apache.log4j.Logger;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.revature.model.userAccounts;
@@ -20,6 +21,7 @@ import com.revature.service.Servicer;
 public class LoginServlet extends HttpServlet {
   
   Servicer s = new Servicer();
+  final static Logger logger = Logger.getLogger(LoginServlet.class);
   
   @Override
   protected void doPost(HttpServletRequest req, HttpServletResponse resp)
@@ -33,12 +35,12 @@ public class LoginServlet extends HttpServlet {
     Gson gson = new Gson ();
     
     if(ua != null) {
-      
+      logger.info("Login Servlet Successful!");
       out.print(gson.toJson(ua).toString());
       out.flush();
     }
     else {
-      System.out.println("it's not ok from LoginServlet");
+      logger.info("Login Servlet Failed!");
       out.print(gson.toJson(null));
       out.flush();
     }

@@ -11,11 +11,15 @@ import java.sql.Types;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import org.apache.log4j.Logger;
 import com.revature.config.ConnectionUtil;
 import com.revature.model.Imbursements;
 import com.revature.model.userAccounts;
+import com.revature.servlet.LoginServlet;
 
 public class ersDao implements DaoInterface<userAccounts, Imbursements>{
+  
+  final static Logger logger = Logger.getLogger(ersDao.class);
 
   public String hashPassword(String username,String password) {
     System.out.println(username);
@@ -28,10 +32,13 @@ public class ersDao implements DaoInterface<userAccounts, Imbursements>{
     cs.execute();
     String pass = cs.getString(1);
     cs.close();
+    logger.info("hashPassword DAO is working correctly!");
     return pass;
   }catch(SQLException e) {
+    logger.info("hashPassword DAO Failed due to a SQL Exception!");
     e.printStackTrace();
   }
+  logger.info("hashPassword DAO Failed!");
   return null;
 }
   
@@ -49,14 +56,17 @@ public class ersDao implements DaoInterface<userAccounts, Imbursements>{
      
       if(rs.next()) {
         userAccounts ua = new userAccounts(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getInt(7));
-       
+        logger.info("Login DAO Successful!");
         return ua;
       } else {
+        logger.info("Login DAO Failed!!");
         return null;
       }
     } catch (SQLException e) {
+      logger.info("Login DAO Failed due to a SQL Exception!");
       e.printStackTrace();
     }
+    logger.info("Login DAO Failure!");
     return null;
   }
 
@@ -72,10 +82,13 @@ public class ersDao implements DaoInterface<userAccounts, Imbursements>{
         imburseList.add(new Imbursements(rs.getInt(1), rs.getDouble(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10)));
       }
       ps.close();
+      logger.info("GetAllImbursements DAO Successful!");
       return (imburseList);
     } catch(SQLException e) {
+      logger.info("GetAllImbursements DAO Failed from a SQLException!");
       e.printStackTrace();
     }
+    logger.info("GetAllImbursements DAO Failed!");
     return null;
     
     
@@ -100,11 +113,14 @@ public class ersDao implements DaoInterface<userAccounts, Imbursements>{
       ps.executeUpdate();
 
       ps.close();
+      logger.info("addReimbursement DAO Successful!");
       return true;
      
     } catch(SQLException e) {
+      logger.info("addReimbursement DAO Failed due to a SQL Exception!");
       e.printStackTrace();
     }
+    logger.info("addReimbursement DAO Failed!");
     return false;
   }
 
@@ -114,11 +130,14 @@ public class ersDao implements DaoInterface<userAccounts, Imbursements>{
       String sql = "update tree_reimbursement set imb_statusId = " + status + " where imb_id = " + reimbData;
       Statement s =  conn.createStatement();
       s.executeUpdate(sql);
+      logger.info("approveOrDeny DAO Successful!");
       return true;
       
     } catch(SQLException e){
+      logger.info("approveOrDeny DAO Failed due to a SQL Exception!");
       e.printStackTrace();
     }
+    logger.info("approveOrDeny DAO Failed!");
     return false;
     }
   
