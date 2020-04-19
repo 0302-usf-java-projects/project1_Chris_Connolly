@@ -50,12 +50,7 @@ public class ersDao implements DaoInterface<userAccounts, Imbursements>{
      
       if(rs.next()) {
         userAccounts ua = new userAccounts(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getInt(7));
-        ua.setUsername(rs.getString(2));
-        ua.setPassword(rs.getString(3));
-        ua.setFirstName(rs.getString(4));
-        ua.setLastName(rs.getString(5));
-        ua.setEmail(rs.getString(6));
-        ua.setUserRole(rs.getInt(7));
+       
         return ua;
       } else {
         return null;
@@ -119,7 +114,7 @@ public class ersDao implements DaoInterface<userAccounts, Imbursements>{
     try(Connection conn = ConnectionUtil.connect()) {
       String sql = "update tree_reimbursement set imb_statusId = " + status + " where imb_id = " + reimbData;
       Statement s =  conn.createStatement();
-      int rs = s.executeUpdate(sql);
+      s.executeUpdate(sql);
       return true;
       
     } catch(SQLException e){
