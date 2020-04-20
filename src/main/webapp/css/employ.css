@@ -129,8 +129,8 @@ html body div.row div.col-8 div#table_wrapper.dataTables_wrapper.no-footer table
 	color: whitesmoke;
 	font-weight: bold !important;
 	position:relative;
-	left:0;
-	right:0;
+	margin-left:150px;
+	margin-right:70px;
 	text-align: center;
 	top:5px;
 	padding-bottom: 5px;
